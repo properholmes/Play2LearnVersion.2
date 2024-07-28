@@ -2,12 +2,13 @@ import Score from "./Score";
 import Button from "./Button";
 
 
-function GameScore () {
+function GameScore (props) {
     return (
         <div id="ana-finalview">
-            <Score />
-            <Button />
-            <Button />        
+            <Score score={props.score} />
+            <Button bootstrapClass="btn btn-primary" label="Play Again!" route="/play"/>
+            <hr></hr>
+            <Button bootstrapClass="btn btn-light" label="Back!" route="/"/>        
         </div>
     )
 }

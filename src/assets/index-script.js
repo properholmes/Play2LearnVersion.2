@@ -6,7 +6,7 @@ const mathb = document.getElementById("play-b");
 // add onclick event listeners to the anagramb and mathb elements
 // When the button elements are clicked, game opens 
 anagramb.addEventListener("click", function () {
-  window.open("/src/public/games/anagram-hunt.html");
+  window.open("http://localhost:5173/"); //opens the anagram game in a new tab dependent on the port number running the game locally
 });
 // //as above, but for math facts game
 mathb.addEventListener("click", function () {
@@ -61,3 +61,4 @@ function updateQuote() {
 updateQuote();
 // Set interval to update quote every 10 seconds
 setInterval(updateQuote, 10000);
+

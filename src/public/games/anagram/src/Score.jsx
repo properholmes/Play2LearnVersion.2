@@ -1,6 +1,8 @@
 function Score(props) {
     return (
-        <></>
+        <>
+        <h6>Score: {props.score}</h6>
+        </>
     )
 }
 

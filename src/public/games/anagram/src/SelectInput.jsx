@@ -1,11 +1,21 @@
-function SelectInput() {
+function SelectInput({label, id, values, currentValue, setCurrentValue}) {
+
+   const selectOptions = values.map((value) => 
+    <option value= {value} key={value.toString()}> {value}
+    </option>
+    ); 
     return (
-        <div>
-            <label htmlFor="select">Select Label</label>
-            <select id="select">
-                <option value="sample value">Sample Value</option>
-            </select>
-        </div>
+      
+        <>
+        <label htmlFor={id}>{label}</label>
+        <select id={id}
+            defaultValue={currentValue}
+            onChange={(e) => setCurrentValue(e.target.value)}>
+            {selectOptions}
+        </select>
+        </>
+
+
     );
 };
 
