@@ -15,7 +15,7 @@ function GameSetup (props){
                     setCurrentValue={props.setWordLength}
                     values={options}/>
                     <Directions />
-                    <Button onClick={props.buttonAction} bootstrapClass="btn btn-primary" label="Play!" route="/play"/>
+                    <Button onClick={props.buttonAction} bootstrapClass="btn btn-warning btn-lg" label="Play!" route="/play"/>
         </div>
     )   
 }

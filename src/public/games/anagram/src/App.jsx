@@ -2,8 +2,6 @@ import GameSetup from './GameSetup';
 import GamePlay from './GamePlay';
 import GameScore from './GameScore';
 import Timer from './Timer'
-import Header from './Header'
-import Footer from './Footer'
 import anagrams from "/src/assets/anagramsArray.js"
 import { useState } from 'react'
 import {Routes, Route} from 'react-router-dom'

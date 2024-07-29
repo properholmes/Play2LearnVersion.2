@@ -8,7 +8,8 @@ function SelectInput({label, id, values, currentValue, setCurrentValue}) {
       
         <>
         <label htmlFor={id}>{label}</label>
-        <select id={id}
+        <select className="form-select form-select-lg mb-3" 
+            aria-label="Large select example" id={id}
             defaultValue={currentValue}
             onChange={(e) => setCurrentValue(e.target.value)}>
             {selectOptions}
