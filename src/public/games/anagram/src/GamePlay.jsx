@@ -93,16 +93,16 @@ function GamePlay(props) {
 
 
     return (
-        <div id="ana-play">
+        <div id="ana-play" className="object-fit-fill solid rounded display-6">
             <Score score={props.score} />
             <Timer />
             <hr />
+            <SolveMe startingWord={startingWord} wordLength={wordLength} />
             <TextInput
                 inputValue={inputValue} // Pass input value as prop
                 setInputValue={setInputValue} // Pass function to update input (optional)
                 checkAnswer={checkAnswer}
             />
-            <SolveMe startingWord={startingWord} wordLength={wordLength} />
             <Left wordsLeft={wordsLeft} />
             <UserGuesses wordAnswers={wordAnswers} correctAnswers={correctAnswers} />
         </div>

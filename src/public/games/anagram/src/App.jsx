@@ -31,7 +31,7 @@ function App() {
   
   return (
     <>
-      <h1 className='p2lAnagram'>Anagram Hunt</h1>
+      <h1 className="display-2">Anagram Hunt</h1>
       <Routes>
         <Route exact path="/" element={
           <GameSetup

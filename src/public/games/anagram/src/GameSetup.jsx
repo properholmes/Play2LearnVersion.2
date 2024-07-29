@@ -7,7 +7,7 @@ function GameSetup (props){
     const options = Object.keys(anagrams);
    
     return (
-        <div id="ana-setup">
+        <div id="ana-setup" className="display-6">
                     <SelectInput 
                     label="Word Length"
                     id="word-length"

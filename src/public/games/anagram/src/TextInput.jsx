@@ -12,6 +12,7 @@ function TextInput(props) {
         <div id="your-guess">
           <input
             type="text"
+            className="input-group mb-3"
             value={props.inputValue}
             onChange={handleChange}
             placeholder="Type anagram guess here"
