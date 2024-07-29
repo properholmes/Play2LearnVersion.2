@@ -2,6 +2,7 @@
 //select button element id's "play-a" and "play-b" and store them in corresponding variables
 const anagramb = document.getElementById("play-a");
 const mathb = document.getElementById("play-b");
+const anagramDropdwn = document.getElementById("anagramDropdwn");
 
 // add onclick event listeners to the anagramb and mathb elements
 // When the button elements are clicked, game opens 
@@ -11,6 +12,10 @@ anagramb.addEventListener("click", function () {
 // //as above, but for math facts game
 mathb.addEventListener("click", function () {
   window.open("/src/public/games/math-facts.html");
+});
+
+anagramDropdwn.addEventListener("click", function () {
+  window.open("http://localhost:5173/"); //opens the anagram game in a new tab from the dropdown menu
 });
 
 //random quote generator: 
