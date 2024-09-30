@@ -1,0 +1,162 @@
+//only for reference, refactoring for react into a new react component
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./math.css">
+  <link rel="stylesheet" href="./index.css">
+  <title>Play2Learn</title>
+</head>
+
+<body>
+  <header>
+    <nav className="nav-container navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a className="navbar-brand" href="./">Play2Learn</a>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <a className="nav-link" href="./">Home<span className="sr-only">(current)</span></a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="./about">About Us</a>
+          </li>
+          <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Games
+            </a>
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a className="dropdown-item" href="./src/MathFacts/Math.html" target="blank">Math Facts Practice</a>
+              <a className="dropdown-item" href="./anagramhunt" target="blank">Anagram Hunt</a>
+            </div>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/login">Login</a>
+          </li>
+        </ul>
+  
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="math-container">
+      <h2 id="math-title">Math Facts Practice</h2>
+      <div id="math-setup">
+        <form id="math-form">
+          <div id="selction-operation">
+            <label for="operation">Operation:</label>
+            <select id="operation" name="operation">
+              <option value="addition">Addition</option>
+              <option value="subtraction">Subtraction</option>
+              <option value="multiplication">Multiplication</option>
+              <option value="division">Division</option>
+            </select>
+          </div>
+        </form>
+
+        <div id="directions">
+          <ul>
+            <li>1. Select Operation.</li>
+            <li>2. Press <strong>Go.</strong></li>
+            <li>3. How many problems can you solve in 30 seconds?</li>
+          </ul>
+        </div>
+        <button type="submit" id="go-btn">Go</button>
+      </div>
+
+      <div id="math-facts-game">
+        <h3 id="game-mode"></h3>
+        <h3 id="math-problem"></h3>
+        <form>
+          <input type="text" id="answer" placeholder="Enter your answer here">
+        </form>
+
+        <table>
+          <tr>
+            <td>
+              <button class="int" value="1">1</button>
+            </td>
+            <td>
+              <button class="int">2</button>
+            </td>
+            <td>
+              <button class="int">3</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="int">4</button>
+            </td>
+            <td>
+              <button class="int">5</button>
+            </td>
+            <td>
+              <button class="int">6</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="int">7</button>
+            </td>
+            <td>
+              <button class="int">8</button>
+            </td>
+            <td>
+              <button class="int">9</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="int">0</button>
+            </td>
+            <td colspan="2">
+              <button id="clearBtn" class="int">CLEAR</button>
+            </td>
+          </tr>
+        </table>
+        <h3 id="score"></h3>
+        <h3 id="message"></h3>
+        <h3 id="math-timer"></h3>
+      </div>
+      <div id="final-view">
+        <h3 id="selectedGameMode"></h3>
+        <h5>Time's up!</h5>
+        <h3>Your final score is:</h3>
+        <h2 id="final-score"></h2>
+        <button type="play-again" id="again-btn">Play Again</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p id="copywrite" aria-label="website Copywritten 2024 by Play2Learn">&copy; 2024 Play2Learn</p>
+    <address>
+      <a href="../contact-us.html" target="_blank">
+        <i class="fa-regular fa-envelope" id="email-p2l" alt="Email icon"></i></a>
+      <a href="https://www.instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram" id='insta' alt="Instagram icon"></i></a>
+      <a href="https://twitter.com" target="_blank">
+        <i class="fa-brands fa-x-twitter" id='x-twitter' alt="X-Twitter icon"></i></a>
+      <a href="https://www.facebook.com" target="_blank">
+        <i class="fa-brands fa-facebook" id='meta-fb' alt="Meta-Facebook icon"></i></a>
+    </address>
+  </footer>
+  <script src="./math.js"></script>
+</body>
+
+</html>
