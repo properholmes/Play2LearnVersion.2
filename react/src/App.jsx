@@ -39,6 +39,21 @@ function App() {
   const [correctAnswers, setCorrectAnswers] = useState([]);
   const[blockCorrect, setBlockCorrect]= useState([]);
 
+  const [allWords, setAllWords] = useState(anagrams[wordLength]);
+   // list of possible answers in anagram block
+   const[possibleWords, setPossibleWords] = useState(findRandom(allWords));
+   // find the starting word in that anagram block
+   const [wordHint, setWordHint] = useState(findRandom(possibleWords));
+   // filter word array to remove the word hint or keyword
+   const [filteredPossible, setFilteredPossible] = useState(() => {
+       if (possibleWords && wordHint) {
+           return possibleWords.filter((item) => item !== wordHint);
+       } else {
+           return []; // Return an empty array if either possibleWords or wordHint is undefined
+       }
+   });
+
+
   return (
     <>
     <Header />
@@ -62,14 +77,24 @@ function App() {
           correctAnswers={correctAnswers}
           setCorrectAnswers={setCorrectAnswers}
           blockCorrect={blockCorrect}
-          setBlockCorrect={setBlockCorrect}/>
+          setBlockCorrect={setBlockCorrect}
+          filteredPossible={filteredPossible}
+          setFilteredPossible={setFilteredPossible}
+          allWords={allWords}
+          setAllWords={setAllWords}
+          possibleWords={possibleWords}
+          setPossibleWords={setPossibleWords}
+          wordHint={wordHint}
+          setWordHint={setWordHint}/>
         }>
         </Route>
         <Route exact path="/score" element={
           <GameScore 
           score={score}
           correctAnswers={correctAnswers}
-          blockCorrect={blockCorrect}/>
+          blockCorrect={blockCorrect}
+          filteredPossible={filteredPossible}
+          wordHint={wordHint}/>
         }>          
         </Route>
         <Route exact path="/mathfacts" element={<Mathfacts />} />
