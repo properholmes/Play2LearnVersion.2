@@ -4,9 +4,9 @@ function Header() {
   return (
     <>
       <header>
-        <nav className="nav-container navbar navbar-expand-lg navbar-light bg-light fixed-top">
-          <a className="navbar-brand" href="./">Play2Learn</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <a className="navbar-brand ms-3" href="./">Play2Learn</a>
+          <button className="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
 
@@ -31,7 +31,7 @@ function Header() {
                 <a className="nav-link" href="/login">Login</a>
               </li>
             </ul>
-      
+
           </div>
         </nav>
       </header>
@@ -41,25 +41,3 @@ function Header() {
 }
 
 export default Header
-
-
-{/* < div classNameName = "nav-container" >
-    <nav classNameName="navbar navbar-expand-lg bg-body-tertiary">
-      <h1 id="navbar-logo">
-        <i classNameName="fa-solid fa-frog"></i>
-        <a href="index.html" id="banner" title="Play2Learn Home Page">Play2Learn</a>
-      </h1>
-      <ul classNameName="nav-menu">
-        <li classNameName="nav-links"><a href="/src/public/index.html">Home</a></li>
-        <li classNameName="nav-links" id="games">Games</li>
-        <ul id="games-links">
-          <li classNameName="nav-links p2lgames"><a href="/src/public/games/anagram-hunt.html" target="_blank">Anagram
-            Hunt</a></li>
-          <li classNameName="nav-links p2lgames"><a href="/src/public/games/math-facts.html" target="_blank">Math Facts
-            Practice</a></li>
-        </ul>
-        <li classNameName="nav-links"><a href="/src/public/about.html">About</a></li>
-        <li classNameName="nav-links"><a href="/src/public/login.html">Login</a></li>
-      </ul>
-    </nav>
-      </div > */}
