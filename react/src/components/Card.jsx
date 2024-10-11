@@ -9,10 +9,10 @@ function Card({ data }) { // define the Card component, accepting 'data' as a pr
                  alt="background image overlay of random numbers" 
                  style={{'maxHeight': '40%'}}/>     
             <div className="card-body"> 
-                <h5 className="card-title">{data.title}</h5> // Title of the card, sourced from 'data.title'
-                <p className="card-text">{data.description}</p>   // Description of the card, sourced from 'data.description'
+                <h5 className="card-title">{data.title}</h5>
+                <p className="card-text">{data.description}</p>
             </div>
-            <Button buttondata={data} /> // Render the Button component, passing the entire 'data' object as props
+            <Button buttondata={data} />
         </div>
     )
 }
