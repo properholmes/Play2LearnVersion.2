@@ -4,7 +4,8 @@
 // use javascript to hide the login form and show the register form
 // Both forms should have an action of javascript:alert('Form Submitted'), alerting that
 // the form was submitted
-//Hide login form when creating new account, use Javascript to hide the login form and show the register form
+// Hide login form when creating new account, use Javascript to hide the login form and show the register form
+
 import TextInput from "./TextInput"
 function Register() {
 
