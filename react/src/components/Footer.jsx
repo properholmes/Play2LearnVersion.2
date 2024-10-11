@@ -6,7 +6,7 @@ function Footer() {
         <footer className="footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p id="copywrite" className="col-md-4 mb-0 text-muted" aria-label="website Copywritten 2024 by Play2Learn" >&copy; 2024 Play2Learn</p>
         <address className="nav col-md-4 justify-content-end">
-          <a href="contact-us.html" target="_blank">
+          <a href="/contact" target="_blank">
             <i className="fa-regular fa-envelope" id="email-p2l" alt="Email icon"></i></a>
             &nbsp;
             &nbsp;
